@@ -1,0 +1,418 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+@import "__spacing.css";
+/* Using Tachyons spacing */
+
+html, body {
+  color: #222;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  height: 100%;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * 
+ */
+
+audio, canvas, iframe, img, svg, img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px 0;
+}
+
+video {
+  vertical-align: middle;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1;
+  -ms-flex: 1;
+  overflow: auto;
+}
+
+/* ==========================================================================
+  Add your CSS here 
+   ========================================================================== */
+
+/* The hero image */
+
+.hero-image {
+  margin: 0 0;
+  background-image: url("../img/hero-beach.jpg");
+  height: 480px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.header__logo {
+  height: 32px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  margin: auto 140px auto 140px;
+}
+
+.footer__items a {
+  font-weight: 500;
+  color: #222;
+  text-decoration: none;
+}
+
+section {
+  height: auto;
+  overflow: none;
+  /* control scrol bar*/
+  border-bottom: 2px solid;
+  margin: auto 90px auto 90px;
+  background: #ffffff;
+  display: block;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #756f6f;
+  font-weight: normal;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-indent: 20px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+/* ========================The Haburger Menu============================*/
+
+.dropbtn {
+  position: relative;
+  float: right;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn span {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 33px;
+  height: 3px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  background: #191516;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #83afed;
+}
+
+.dropdown {
+  position: absolute;
+  display: block;
+  right: 5%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 170px;
+  right: 10px;
+  top: 60px;
+  overflow: none;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+/* ========================Hero Title============================*/
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  margin-left: 60px;
+  margin-top: 120px;
+}
+
+.hero-container>div {
+  background-color: #ffffff;
+  width: fit-content;
+  text-align: left;
+  font-size: calc(20px + 1vw);
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+  width: -moz-fit-content;
+}
+
+/* ========================What we Fund============================*/
+
+.Half1 {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+
+.left-half {
+  width: 49%;
+  float: left;
+  margin-right: 2 %;
+  font-size: 23px;
+}
+
+.right-half {
+  width: 49%;
+  float: left;
+  margin-right: 0;
+}
+
+.communities {
+  background-color: #f2c94c;
+  height: 100px;
+  box-sizing: border-box;
+  text-indent: 20px;
+  display: flex;
+}
+
+.technologies {
+  background-color: #83afed;
+  height: 100px;
+  box-sizing: border-box;
+  text-indent: 20px;
+  display: flex;
+}
+
+.learnMore {
+  background-color: #000000;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 2px;
+  height: 40px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-weight: bold;
+  text-indent: 20px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.align-bottom {
+  align-self: flex-end;
+  font-size: 19px;
+}
+
+.align-middle {
+  align-self: center;
+}
+
+/* ======================== Our Mission============================*/
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.left_side {
+  width: 58%;
+  float: left;
+  margin-right: 8%;
+  font-size: 23px;
+}
+
+.right_side {
+  width: 42%;
+  min-height: 200px;
+  float: left;
+  margin-top: 40px;
+  background-image: url("../img/mission-group-img.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ======================== Communities + Technologies ============================*/
+
+.thirds1, .thirds2 {
+  padding-bottom: 70px;
+}
+
+.parent1, .parent2 {
+  border: 70px 70px auto 70px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.child1 {
+  width: 30%;
+  height: 540px;
+  margin-right: 5%;
+  background-color: #f2c94c;
+}
+
+.child2 {
+  width: 30%;
+  height: 540px;
+  margin-right: 5%;
+  background-color: #83afed;
+}
+
+.child1:last-child {
+  margin-right: 0;
+}
+
+.child2:last-child {
+  margin-right: 0;
+}
+
+.child_top {
+  height: 210px;
+}
+
+.child_bottom {
+  height: 330px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.left1 {
+  background-image: url("../img/communities-img-1.jpg");
+}
+
+.middle1 {
+  background-image: url("../img/communities-img-2.jpg");
+}
+
+.right1 {
+  background-color: #f2c94c;
+}
+
+.left2 {
+  background-image: url("../img/technologies-img-1.jpg");
+}
+
+.middle2 {
+  background-color: #83afed;
+}
+
+.right2 {
+  background-image: url("../img/technologies-img-2.jpg");
+}
+
+.child1 p, .child2 p {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: -5px;
+  font-size: 21px;
+}
+
+button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: left;
+  text-decoration: capitalized;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
